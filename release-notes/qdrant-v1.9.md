@@ -14,12 +14,12 @@
 
 * https://github.com/qdrant/qdrant/pull/4165 - Handle Out-Of-Disk on insertions gracefully
 * https://github.com/qdrant/qdrant/pull/3964 - Faster consensus convergence with batched updates
-* https://github.com/qdrant/qdrant/pull/4301 - deduplicate points by ID for custom sharding
+* https://github.com/qdrant/qdrant/pull/4301 - Deduplicate points by ID for custom sharding
 
 ## Bug fixes
 
 * https://github.com/qdrant/qdrant/pull/4307 - Fix overflow panic if scroll limit is usize::MAX
-* https://github.com/qdrant/qdrant/pull/4322 - Fixes panic with missing sparse vectors after recovery of corrupted storage
+* https://github.com/qdrant/qdrant/pull/4322 - Fix panic with missing sparse vectors after recovery of corrupted storage
 
 
 ## Web UI
