@@ -1,11 +1,35 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.3](qdrant-v1.9.md#release-v193) | May 26 2024 | 05/26/24 | 2024-05-26 |
 | [v1.9.2](qdrant-v1.9.md#release-v192) | May 10 2024 | 05/10/24 | 2024-05-10 |
 | [v1.9.1](qdrant-v1.9.md#release-v191) | May 02 2024 | 05/02/24 | 2024-05-02 |
 | [v1.9.0](qdrant-v1.9.md#release-v190) | Apr 22 2024 | 04/22/24 | 2024-04-22 |
 
 
 
+# Release v1.9.3
+# Change log
+
+## Improvements
+
+* https://github.com/qdrant/qdrant/pull/4165 - Handle Out-Of-Disk on insertions gracefully
+* https://github.com/qdrant/qdrant/pull/3964 - Faster consensus convergence with batched updates
+* https://github.com/qdrant/qdrant/pull/4301 - deduplicate points by ID for custom sharding
+
+## Bug fixes
+
+* https://github.com/qdrant/qdrant/pull/4307 - Fix overflow panic if scroll limit is usize::MAX
+* https://github.com/qdrant/qdrant/pull/4322 - Fixes panic with missing sparse vectors after recovery of corrupted storage
+
+
+## Web UI
+
+* https://github.com/qdrant/qdrant-web-ui/pull/183 - Notification for miss-configured collections
+
+Full change log: https://github.com/qdrant/qdrant-web-ui/releases/tag/v0.1.26
+
+
+-----
 # Release v1.9.2
 # Change log
 
