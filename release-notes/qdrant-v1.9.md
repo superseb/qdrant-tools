@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.4](qdrant-v1.9.md#release-v194) | May 28 2024 | 05/28/24 | 2024-05-28 |
 | [v1.9.3](qdrant-v1.9.md#release-v193) | May 26 2024 | 05/26/24 | 2024-05-26 |
 | [v1.9.2](qdrant-v1.9.md#release-v192) | May 10 2024 | 05/10/24 | 2024-05-10 |
 | [v1.9.1](qdrant-v1.9.md#release-v191) | May 02 2024 | 05/02/24 | 2024-05-02 |
@@ -7,6 +8,14 @@
 
 
 
+# Release v1.9.4
+# Change log
+
+## Bug fixes
+- https://github.com/qdrant/qdrant/pull/4332 - Fix potentially losing a segment when creating a snapshot with ongoing updates
+- https://github.com/qdrant/qdrant/pull/4342 - Fix potential panic on start if there is no appendable segment
+- https://github.com/qdrant/qdrant/pull/4328 - Prevent panic when searching with huge limit
+-----
 # Release v1.9.3
 # Change log
 
