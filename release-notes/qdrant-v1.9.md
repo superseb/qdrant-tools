@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.5](qdrant-v1.9.md#release-v195) | Jun 11 2024 | 06/11/24 | 2024-06-11 |
 | [v1.9.4](qdrant-v1.9.md#release-v194) | May 28 2024 | 05/28/24 | 2024-05-28 |
 | [v1.9.3](qdrant-v1.9.md#release-v193) | May 26 2024 | 05/26/24 | 2024-05-26 |
 | [v1.9.2](qdrant-v1.9.md#release-v192) | May 10 2024 | 05/10/24 | 2024-05-10 |
@@ -8,6 +9,32 @@
 
 
 
+# Release v1.9.5
+# Change log
+
+## Features
+- https://github.com/qdrant/qdrant/pull/4254 - Add pyroscope integration for continuous profiling on demand
+
+## Improvements
+- https://github.com/qdrant/qdrant/pull/4309 - Allow to configure default number of shards per node
+- https://github.com/qdrant/qdrant/pull/4317 - Allow to overwrite optimizer settings via config
+- https://github.com/qdrant/qdrant/pull/4312, https://github.com/qdrant/qdrant/pull/4369 - Improve vector size estimations, making index thresholds more reliable
+- https://github.com/qdrant/qdrant/pull/4428 - Improve default maximum segment size, base it on number of CPUs used for indexing
+- https://github.com/qdrant/qdrant/pull/4370 - Use consistent RocksDB settings for both put and remove
+- https://github.com/qdrant/qdrant/pull/4376 - Improve ordering of insertions and deletions in RocksDB
+- https://github.com/qdrant/qdrant/pull/4371 - Log error if segment flushing failed on drop
+- https://github.com/qdrant/qdrant/pull/4352 - Promote REST request processing problems from warning to error
+- https://github.com/qdrant/qdrant/pull/4368 - Improve error messages in cases of missing vectors
+- https://github.com/qdrant/qdrant/pull/4391 - Improve shard state log message, not strictly related to snapshot recovery
+- https://github.com/qdrant/qdrant/pull/4414 - Improve Dockerfile, don't invalidate caches each commit and allow debug settings
+
+## Bug fixes
+- https://github.com/qdrant/qdrant/pull/4402 - Fix deadlock caused by concurrent snapshot and optimization
+- https://github.com/qdrant/qdrant/pull/4411 - Fix potentially losing vectors on crash by enabling RocksDB WAL
+- https://github.com/qdrant/qdrant/pull/4416, https://github.com/qdrant/qdrant/pull/4440 - Respect `max_segment_size` on data ingestion with optimizers disabled, create segments as needed
+- https://github.com/qdrant/qdrant/pull/4442 - Fix potentially having bad HNSW links on multithreaded systems
+
+-----
 # Release v1.9.4
 # Change log
 
