@@ -1,6 +1,7 @@
 # Qdrant
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.6](qdrant-v1.9.md#release-v196) | Jun 22 2024 | 06/22/24 | 2024-06-22 |
 | [v1.9.5](qdrant-v1.9.md#release-v195) | Jun 11 2024 | 06/11/24 | 2024-06-11 |
 | [v1.9.4](qdrant-v1.9.md#release-v194) | May 28 2024 | 05/28/24 | 2024-05-28 |
 | [v1.9.3](qdrant-v1.9.md#release-v193) | May 26 2024 | 05/26/24 | 2024-05-26 |

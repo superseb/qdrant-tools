@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.6](qdrant-v1.9.md#release-v196) | Jun 22 2024 | 06/22/24 | 2024-06-22 |
 | [v1.9.5](qdrant-v1.9.md#release-v195) | Jun 11 2024 | 06/11/24 | 2024-06-11 |
 | [v1.9.4](qdrant-v1.9.md#release-v194) | May 28 2024 | 05/28/24 | 2024-05-28 |
 | [v1.9.3](qdrant-v1.9.md#release-v193) | May 26 2024 | 05/26/24 | 2024-05-26 |
@@ -9,6 +10,16 @@
 
 
 
+# Release v1.9.6
+# Change log
+
+## Bug fixes
+
+* https://github.com/qdrant/qdrant/pull/4472 - fix potential panic on recovery sparse vectors from crash
+* https://github.com/qdrant/qdrant/pull/4426 - improve error message on missing payload index
+* https://github.com/qdrant/qdrant/pull/4375 - fix in-place updates for sparse index
+* https://github.com/qdrant/qdrant/pull/4523 - fix missing payload index issue, introduced in v1.9.5
+-----
 # Release v1.9.5
 # Change log
 
