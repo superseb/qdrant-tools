@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.9.7](qdrant-v1.9.md#release-v197) | Jun 25 2024 | 06/25/24 | 2024-06-25 |
 | [v1.9.6](qdrant-v1.9.md#release-v196) | Jun 22 2024 | 06/22/24 | 2024-06-22 |
 | [v1.9.5](qdrant-v1.9.md#release-v195) | Jun 11 2024 | 06/11/24 | 2024-06-11 |
 | [v1.9.4](qdrant-v1.9.md#release-v194) | May 28 2024 | 05/28/24 | 2024-05-28 |
@@ -10,6 +11,19 @@
 
 
 
+# Release v1.9.7
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/4517 - Do not allow embedding the web UI in an iframe
+- https://github.com/qdrant/qdrant/pull/4556 - Include HNSW configuration in snasphots to fix some edge cases
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/4555 - Fix panic on start with sparse index from versions 1.9.3 to 1.9.6
+- https://github.com/qdrant/qdrant/pull/4551 - Fix positive/negative points IDs being excluded when using recommendation search with `lookup_from`
+-----
 # Release v1.9.6
 # Change log
 
