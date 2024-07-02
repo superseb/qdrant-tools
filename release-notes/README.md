@@ -1,6 +1,14 @@
 # Qdrant
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.10.0](qdrant-v1.10.md#release-v1100) | Jul 01 2024 | 07/01/24 | 2024-07-01 |
+
+
+
+
+
+| Version | Date | US date | EU date |
+| ------- | ---- | ------- | ------- |
 | [v1.9.7](qdrant-v1.9.md#release-v197) | Jun 25 2024 | 06/25/24 | 2024-06-25 |
 | [v1.9.6](qdrant-v1.9.md#release-v196) | Jun 22 2024 | 06/22/24 | 2024-06-22 |
 | [v1.9.5](qdrant-v1.9.md#release-v195) | Jun 11 2024 | 06/11/24 | 2024-06-11 |
@@ -87,7 +95,6 @@
 
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
-| [v1.10.0](qdrant-v1.1.md#release-v1100) | Jul 01 2024 | 07/01/24 | 2024-07-01 |
 | [v1.1.3](qdrant-v1.1.md#release-v113) | May 06 2023 | 05/06/23 | 2023-05-06 |
 | [v1.1.2](qdrant-v1.1.md#release-v112) | Apr 27 2023 | 04/27/23 | 2023-04-27 |
 | [v1.1.1](qdrant-v1.1.md#release-v111) | Apr 12 2023 | 04/12/23 | 2023-04-12 |
