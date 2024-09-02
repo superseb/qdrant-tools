@@ -1,9 +1,49 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.11.3](qdrant-v1.11.md#release-v1113) | Aug 29 2024 | 08/29/24 | 2024-08-29 |
+| [v1.11.2](qdrant-v1.11.md#release-v1112) | Aug 28 2024 | 08/28/24 | 2024-08-28 |
+| [v1.11.1](qdrant-v1.11.md#release-v1111) | Aug 27 2024 | 08/27/24 | 2024-08-27 |
 | [v1.11.0](qdrant-v1.11.md#release-v1110) | Aug 12 2024 | 08/12/24 | 2024-08-12 |
 
 
 
+# Release v1.11.3
+# Change log
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/4977 - Fix match payload filters on string and UUID indices
+-----
+# Release v1.11.2
+# Change log
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/4973 - Fix potential panic during payload index building
+-----
+# Release v1.11.1
+# Change log
+
+## Improvements
+
+* https://github.com/qdrant/qdrant/pull/4855 - Allow to modify data before writing on disk for copy-on-write operations
+* https://github.com/qdrant/qdrant/pull/4941 - Non-blocking payload index building
+* https://github.com/qdrant/qdrant/pull/4947 - Include list of peers in telemetry
+* https://github.com/qdrant/qdrant/pull/4961 - Support for MatchAny and Except conditions for UUID index
+
+
+## Bug fixes
+
+* https://github.com/qdrant/qdrant/pull/4952 - Fix point deletions on mmap segment optimization.
+* https://github.com/qdrant/qdrant/pull/4909 - Fix Max Upload Size for s3 snapshot storage
+* https://github.com/qdrant/qdrant/pull/4929 - Fix configuration of bool and geo index params with explicit schema
+* https://github.com/qdrant/qdrant/pull/4953 - Proper handle of UUID index in issue reporting
+
+
+## Web UI
+
+* https://github.com/qdrant/qdrant-web-ui/releases/tag/v0.1.31 - Improved navigation and collection view
+-----
 # Release v1.11.0
 # Change Log
 
