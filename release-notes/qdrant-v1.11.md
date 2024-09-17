@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.11.4](qdrant-v1.11.md#release-v1114) | Sep 17 2024 | 09/17/24 | 2024-09-17 |
 | [v1.11.3](qdrant-v1.11.md#release-v1113) | Aug 29 2024 | 08/29/24 | 2024-08-29 |
 | [v1.11.2](qdrant-v1.11.md#release-v1112) | Aug 28 2024 | 08/28/24 | 2024-08-28 |
 | [v1.11.1](qdrant-v1.11.md#release-v1111) | Aug 27 2024 | 08/27/24 | 2024-08-27 |
@@ -7,6 +8,35 @@
 
 
 
+# Release v1.11.4
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/4940 - Add grey collection status if optimizations are pending after restart
+- https://github.com/qdrant/qdrant/pull/5073 - Parallelize deduplication of points on start, making startups faster
+- https://github.com/qdrant/qdrant/pull/5072 - Significantly improve performance of lookup/delete in keyword index, making startups faster
+- https://github.com/qdrant/qdrant/pull/5091 - Buffer reads when loading quantized vectors, making startups faster
+- https://github.com/qdrant/qdrant/pull/5061, https://github.com/qdrant/qdrant/pull/4943 - Create snapshots without intermediate files, making it faster and requiring less disk space
+- https://github.com/qdrant/qdrant/pull/4997 - Save shard configuration only once when creating snapshot
+- https://github.com/qdrant/qdrant/pull/5041 - Add template in configuration to configure logging to disk
+- https://github.com/qdrant/qdrant/pull/5066 - Report more detailed error if consensus stops due to an error
+- https://github.com/qdrant/qdrant/pull/5035 - Improve error reporting for malformed JSON path strings
+- https://github.com/qdrant/qdrant/pull/4992 - Reuse HTTP client for telemetry reporting
+- https://github.com/qdrant/qdrant/pull/4581 - Print warning in log if JWT RBAC key has low entropy
+- https://github.com/qdrant/qdrant/pull/5058 - Remove mention of max_segment_number from OpenAPI definition, because we don't use this anymore
+
+## Fixes
+
+- https://github.com/qdrant/qdrant/pull/5039 - Fix potential data race in collection aliases file leaving corrupted state
+- https://github.com/qdrant/qdrant/pull/5043 - Fix shard/collection status blinking green between optimizations
+- https://github.com/qdrant/qdrant/pull/5075 - Fsync files to physical storage when restoring snapshot, fixing inconsistencies in volume based snapshots
+- https://github.com/qdrant/qdrant/pull/4994 - Fix potential out of memory error when uploading large snapshot to S3
+- https://github.com/qdrant/qdrant/pull/5089 - Fix keyword index not excluding deleted points properly
+- https://github.com/qdrant/qdrant/pull/5088 - Fix panic on start if mmap metadata file is grown by misbehaving file systems, ignore and continue instead
+- https://github.com/qdrant/qdrant/pull/5090 - Clean temporary segments if optimization is cancelled
+- https://github.com/qdrant/qdrant/pull/5079 - fix consensus logic of deleting shard which is being transferred
+-----
 # Release v1.11.3
 # Change log
 
