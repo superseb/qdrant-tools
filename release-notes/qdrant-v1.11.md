@@ -25,6 +25,7 @@
 - https://github.com/qdrant/qdrant/pull/4992 - Reuse HTTP client for telemetry reporting
 - https://github.com/qdrant/qdrant/pull/4581 - Print warning in log if JWT RBAC key has low entropy
 - https://github.com/qdrant/qdrant/pull/5058 - Remove mention of max_segment_number from OpenAPI definition, because we don't use this anymore
+- https://github.com/qdrant/qdrant/pull/4964 - Use geohash packing, which improves memory usage by geo index by up to 30%
 
 ## Fixes
 
@@ -35,7 +36,7 @@
 - https://github.com/qdrant/qdrant/pull/5089 - Fix keyword index not excluding deleted points properly
 - https://github.com/qdrant/qdrant/pull/5088 - Fix panic on start if mmap metadata file is grown by misbehaving file systems, ignore and continue instead
 - https://github.com/qdrant/qdrant/pull/5090 - Clean temporary segments if optimization is cancelled
-- https://github.com/qdrant/qdrant/pull/5079 - fix consensus logic of deleting shard which is being transferred
+- https://github.com/qdrant/qdrant/pull/5079 - Fix consensus logic of deleting shard which is being transferred
 -----
 # Release v1.11.3
 # Change log
