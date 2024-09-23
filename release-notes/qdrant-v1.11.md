@@ -27,7 +27,7 @@
 - https://github.com/qdrant/qdrant/pull/5058 - Remove mention of max_segment_number from OpenAPI definition, because we don't use this anymore
 - https://github.com/qdrant/qdrant/pull/4964 - Use geohash packing, which improves memory usage by geo index by up to 30%
 
-## Fixes
+## Bug fixes
 
 - https://github.com/qdrant/qdrant/pull/5039 - Fix potential data race in collection aliases file leaving corrupted state
 - https://github.com/qdrant/qdrant/pull/5043 - Fix shard/collection status blinking green between optimizations
