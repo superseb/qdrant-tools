@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.11.5](qdrant-v1.11.md#release-v1115) | Sep 23 2024 | 09/23/24 | 2024-09-23 |
 | [v1.11.4](qdrant-v1.11.md#release-v1114) | Sep 17 2024 | 09/17/24 | 2024-09-17 |
 | [v1.11.3](qdrant-v1.11.md#release-v1113) | Aug 29 2024 | 08/29/24 | 2024-08-29 |
 | [v1.11.2](qdrant-v1.11.md#release-v1112) | Aug 28 2024 | 08/28/24 | 2024-08-28 |
@@ -8,6 +9,15 @@
 
 
 
+# Release v1.11.5
+# Change log
+
+## Bug fixes
+- https://github.com/qdrant/qdrant/pull/5113 - Fix set payload with nested key not updating nested structure properly in some cases
+- https://github.com/qdrant/qdrant/pull/5111 - Fix optimizations potentially getting stuck if low optimization limit is configured
+- https://github.com/qdrant/qdrant/pull/5105 - Properly configure RocksDB to use LZ4 compression for payload index
+- https://github.com/qdrant/qdrant/pull/5123 - If populating mmap with syscall fails, fall back to naive population
+-----
 # Release v1.11.4
 # Change log
 
