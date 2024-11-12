@@ -1,11 +1,24 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.12.3](qdrant-v1.12.md#release-v1123) | Nov 12 2024 | 11/12/24 | 2024-11-12 |
 | [v1.12.2](qdrant-v1.12.md#release-v1122) | Nov 08 2024 | 11/08/24 | 2024-11-08 |
 | [v1.12.1](qdrant-v1.12.md#release-v1121) | Oct 11 2024 | 10/11/24 | 2024-10-11 |
 | [v1.12.0](qdrant-v1.12.md#release-v1120) | Oct 08 2024 | 10/08/24 | 2024-10-08 |
 
 
 
+# Release v1.12.3
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/5411 - Do not report peer address replaced as warning if it's still the same
+- https://github.com/qdrant/qdrant/pull/5426 - Expose usage of async scorer in telemetry
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/5427 - Fix potential panic during search over deleted points or with payload filters
+-----
 # Release v1.12.2
 # Change log
 
