@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.12.4](qdrant-v1.12.md#release-v1124) | Nov 18 2024 | 11/18/24 | 2024-11-18 |
 | [v1.12.3](qdrant-v1.12.md#release-v1123) | Nov 12 2024 | 11/12/24 | 2024-11-12 |
 | [v1.12.2](qdrant-v1.12.md#release-v1122) | Nov 08 2024 | 11/08/24 | 2024-11-08 |
 | [v1.12.1](qdrant-v1.12.md#release-v1121) | Oct 11 2024 | 10/11/24 | 2024-10-11 |
@@ -7,6 +8,25 @@
 
 
 
+# Release v1.12.4
+# Change log
+
+## Improvements
+
+* https://github.com/qdrant/qdrant/pull/5440 - :sparkles: Optimize mmap sequential access for full-scan segments and reading of large vectors
+* https://github.com/qdrant/qdrant/pull/5428 - Leverage ahash in search results
+* https://github.com/qdrant/qdrant/pull/5414 - Improvements for update clocks to improve updates consistency
+* https://github.com/qdrant/qdrant/pull/5448 - Sync consensus at the end of stream records transfer
+* https://github.com/qdrant/qdrant/pull/5378 - Introduce a unique identifier for collections for easier consensus snapshots resolution
+
+
+## Bug fixes
+
+* https://github.com/qdrant/qdrant/pull/5457 - :sparkles: Fixes for rescoring param usage and usage of disabled HNSW
+* https://github.com/qdrant/qdrant/pull/5439 - Fix the file name too long error during collection deletion
+
+
+-----
 # Release v1.12.3
 # Change log
 
