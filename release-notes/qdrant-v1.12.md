@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.12.5](qdrant-v1.12.md#release-v1125) | Dec 09 2024 | 12/09/24 | 2024-12-09 |
 | [v1.12.4](qdrant-v1.12.md#release-v1124) | Nov 18 2024 | 11/18/24 | 2024-11-18 |
 | [v1.12.3](qdrant-v1.12.md#release-v1123) | Nov 12 2024 | 11/12/24 | 2024-11-12 |
 | [v1.12.2](qdrant-v1.12.md#release-v1122) | Nov 08 2024 | 11/08/24 | 2024-11-08 |
@@ -8,6 +9,45 @@
 
 
 
+# Release v1.12.5
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/5505 - Improve point retrieval across shards by streaming results
+- https://github.com/qdrant/qdrant/pull/5521 - Improve point searches across segments by streaming results
+- https://github.com/qdrant/qdrant/pull/5514 - Improve facet computing across shards by streaming results
+- https://github.com/qdrant/qdrant/pull/5405 - Make `/readyz` catch up to latest consensus commit
+- https://github.com/qdrant/qdrant/pull/5506 - Improve handling of non-transient errors, making shard transfers more robust
+- https://github.com/qdrant/qdrant/pull/5478 - When peer starts, cancel all shard transfers related to it
+- https://github.com/qdrant/qdrant/pull/5536 - Improve error message on sparse vector validation error
+- https://github.com/qdrant/qdrant/pull/5546, https://github.com/qdrant/qdrant/pull/5580 - Improve error messages on various structure variants on validation error
+- https://github.com/qdrant/qdrant/pull/5540 - Improve point counting on proxy segments by deduplicating point IDs
+- https://github.com/qdrant/qdrant/pull/5522 - Expose shards keys in telemetry
+- https://github.com/qdrant/qdrant/pull/5591 - Improve payload performance in gRPC API
+- https://github.com/qdrant/qdrant/pull/5486 - Remove support for reading HNSW graphs of Qdrant 0.8.4 and older, simplifying behavior
+- https://github.com/qdrant/qdrant/pull/5579 - Improve gRPC logging and error handling
+- https://github.com/qdrant/qdrant/pull/5493 - Always log all errors when applying update to replica set
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/5585 - Improve data consistency, fix point deduplication on start potentially removing newest point version
+- https://github.com/qdrant/qdrant/pull/5527, https://github.com/qdrant/qdrant/pull/5528, https://github.com/qdrant/qdrant/pull/5531 - Improve data consistency, fix mixing point versions when applying updates, always use latest point
+- https://github.com/qdrant/qdrant/pull/5543 - Improve data consistency, fix segment builder mixing point versions during segment optimization
+- https://github.com/qdrant/qdrant/pull/5573 - Improve data consistency, fix proxy segment not using correct point versions when propagating point deletes
+- https://github.com/qdrant/qdrant/pull/5581 - Improve data consistency, fix proxy segment not using correct versions when propagating payload index changes
+- https://github.com/qdrant/qdrant/pull/5553 - Improve data consistency, fix proxy segment not flushing changes if sharing a write segment
+- https://github.com/qdrant/qdrant/pull/5557 - Improve data consistency, fix flushing proxied segment acknowledging operations that were not actually persisted
+- https://github.com/qdrant/qdrant/pull/5510 - Improve data consistency, fix marking points as deleted not working in all cases
+- https://github.com/qdrant/qdrant/pull/5598 - Fix peer getting stuck on start if consensus snapshots are used
+- https://github.com/qdrant/qdrant/pull/5484 - Fix panic on huge search limit
+- https://github.com/qdrant/qdrant/pull/5600 - Fix prefetch with group-by internally using wrong request limit, significantly reducing search time
+- https://github.com/qdrant/qdrant/pull/5488 - Fix incorrect timeout handling in distance matrix API
+- https://github.com/qdrant/qdrant/pull/5495 - Fix incorrect timeout handling on remote shards
+- https://github.com/qdrant/qdrant/pull/5596 - Fix broken replication factor in gRPC create shard key API
+- https://github.com/qdrant/qdrant/pull/5551 - Fix potential division by zero in facets API
+- https://github.com/qdrant/qdrant/pull/5593, https://github.com/qdrant/qdrant/pull/5603, https://github.com/qdrant/qdrant/pull/5605, https://github.com/qdrant/qdrant-web-ui/pull/262 - Bump some dependencies to patch potential security vulnerabilities
+-----
 # Release v1.12.4
 # Change log
 
