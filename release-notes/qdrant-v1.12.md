@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.12.6](qdrant-v1.12.md#release-v1126) | Jan 08 2025 | 01/08/25 | 2025-01-08 |
 | [v1.12.5](qdrant-v1.12.md#release-v1125) | Dec 09 2024 | 12/09/24 | 2024-12-09 |
 | [v1.12.4](qdrant-v1.12.md#release-v1124) | Nov 18 2024 | 11/18/24 | 2024-11-18 |
 | [v1.12.3](qdrant-v1.12.md#release-v1123) | Nov 12 2024 | 11/12/24 | 2024-11-12 |
@@ -9,6 +10,26 @@
 
 
 
+# Release v1.12.6
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/5687 - Support 64-bit dimension indices for sparse vectors
+- https://github.com/qdrant/qdrant/pull/5609 - Support issues API with limited API keys
+- https://github.com/qdrant/qdrant/pull/5602 - Add support for logging in JSON format
+- https://github.com/qdrant/qdrant/pull/5630 - Add web UI to Debian package
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/5629 - Properly flush files with fsync to prevent storage issues
+- https://github.com/qdrant/qdrant/pull/5627 - Atomically save quantization metadata
+- https://github.com/qdrant/qdrant/pull/5628 - Atomically save chunked mmap configuration
+- https://github.com/qdrant/qdrant/pull/5738 - Fix search panic due to unaligned data when loading old Qdrant snapshot (pre v1.8.2)
+- https://github.com/qdrant/qdrant/pull/5643 - Improve collection validation, disallow replication factor 0 causing a panic
+- https://github.com/qdrant/qdrant/pull/5690 - Ignore empty filter conditions rather than showing an error
+- https://github.com/qdrant/qdrant/pull/5676 - Enforce TLS for internal node communication if URL is not explicitly provided
+-----
 # Release v1.12.5
 # Change log
 
