@@ -1,9 +1,29 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.13.1](qdrant-v1.13.md#release-v1131) | Jan 23 2025 | 01/23/25 | 2025-01-23 |
 | [v1.13.0](qdrant-v1.13.md#release-v1130) | Jan 17 2025 | 01/17/25 | 2025-01-17 |
 
 
 
+# Release v1.13.1
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/5820 - Improve performance and memory usage of segment merging in optimizers
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/5848 - Fix potential panic in search after GPU HNSW building
+- https://github.com/qdrant/qdrant/pull/5847 - Fix potential panic in GPU HNSW building when having empty payload index
+- https://github.com/qdrant/qdrant/pull/5819 - Fix set payload by key on in-memory payload storage not persisting properly
+- https://github.com/qdrant/qdrant/pull/5861 - Fix memory mapped sparse vector storage not flushing mappings properly
+- https://github.com/qdrant/qdrant/pull/5838 - Fix user-defined sharding not persisting numeric shard keys properly
+- https://github.com/qdrant/qdrant/pull/5842 - Do not flush empty memory maps to prevent panic on macOS
+- https://github.com/qdrant/qdrant/pull/5843 - Do not flush explicitly when unloading blob storage
+- https://github.com/qdrant/qdrant/pull/5845 - Fix potential panic in full text index due to missed bound check
+
+-----
 # Release v1.13.0
 # Change log
 
