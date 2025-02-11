@@ -1,11 +1,39 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.13.3](qdrant-v1.13.md#release-v1133) | Feb 11 2025 | 02/11/25 | 2025-02-11 |
 | [v1.13.2](qdrant-v1.13.md#release-v1132) | Jan 28 2025 | 01/28/25 | 2025-01-28 |
 | [v1.13.1](qdrant-v1.13.md#release-v1131) | Jan 23 2025 | 01/23/25 | 2025-01-23 |
 | [v1.13.0](qdrant-v1.13.md#release-v1130) | Jan 17 2025 | 01/17/25 | 2025-01-17 |
 
 
 
+# Release v1.13.3
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/5903 - Enable consensus compaction by default, enables fast peer joining and recovery
+- https://github.com/qdrant/qdrant/pull/5956, https://github.com/qdrant/qdrant/pull/5962 - Delete old point versions on update, prevent old points showing up in reads
+- https://github.com/qdrant/qdrant/pull/5870 - Don't include unversioned points in reads, don't include partially persisted points in searches
+- https://github.com/qdrant/qdrant/pull/5871 - Don't include unversioned points in writes, don't use partially persisted points in updates
+- https://github.com/qdrant/qdrant/pull/5904, https://github.com/qdrant/qdrant/pull/5916, https://github.com/qdrant/qdrant/pull/5950 - Pass peer/bootstrap URI with environment variables, support simpler cluster setups
+- https://github.com/qdrant/qdrant/pull/5728 - Improve consensus loop, prevent excessive Raft elections
+- https://github.com/qdrant/qdrant/pull/5946 - Normalize URL paths in REST API
+- https://github.com/qdrant/qdrant/pull/5917 - Add HTTP Retry-After header in REST response if rate limiter is exhausted
+- https://github.com/qdrant/qdrant/pull/5915 - Simplify locks in RocksDB buffer wrapper, use single long rather than two
+- https://github.com/qdrant/qdrant/pull/5942 - Add default log format property to configuration file
+- https://github.com/qdrant/qdrant/pull/5906 - Update roadmap for 2025
+
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/5938 - Fix panic when building of memory mapped sparse vector storage was interrupted
+- https://github.com/qdrant/qdrant/pull/5877 - Rate limit prefetches in query API
+- https://github.com/qdrant/qdrant/pull/5900, https://github.com/qdrant/qdrant/pull/5905, https://github.com/qdrant/qdrant/pull/5914 - Fix potential panic during consensus compaction
+- https://github.com/qdrant/qdrant/pull/5910 - In query API, shortcut on empty retrieve query
+- https://github.com/qdrant/qdrant/pull/5908 - Fix flush logic in RocksDB based vector storage, don't eagerly persist changes
+
+-----
 # Release v1.13.2
 # Change log
 
