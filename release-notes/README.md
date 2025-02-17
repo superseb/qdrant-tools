@@ -1,6 +1,7 @@
 # Qdrant
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.13.4](qdrant-v1.13.md#release-v1134) | Feb 17 2025 | 02/17/25 | 2025-02-17 |
 | [v1.13.3](qdrant-v1.13.md#release-v1133) | Feb 11 2025 | 02/11/25 | 2025-02-11 |
 | [v1.13.2](qdrant-v1.13.md#release-v1132) | Jan 28 2025 | 01/28/25 | 2025-01-28 |
 | [v1.13.1](qdrant-v1.13.md#release-v1131) | Jan 23 2025 | 01/23/25 | 2025-01-23 |
