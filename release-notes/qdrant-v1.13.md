@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.13.5](qdrant-v1.13.md#release-v1135) | Mar 21 2025 | 03/21/25 | 2025-03-21 |
 | [v1.13.4](qdrant-v1.13.md#release-v1134) | Feb 17 2025 | 02/17/25 | 2025-02-17 |
 | [v1.13.3](qdrant-v1.13.md#release-v1133) | Feb 11 2025 | 02/11/25 | 2025-02-11 |
 | [v1.13.2](qdrant-v1.13.md#release-v1132) | Jan 28 2025 | 01/28/25 | 2025-01-28 |
@@ -8,6 +9,40 @@
 
 
 
+# Release v1.13.5
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/6015 - Split CPU budget into CPU and IO to better saturate resources during optimization
+- https://github.com/qdrant/qdrant/pull/6088 - Enhance payload indices to handle IsEmpty and IsNull conditions much more efficiently
+- https://github.com/qdrant/qdrant/pull/6022, https://github.com/qdrant/qdrant/pull/6023 - Optimize ID tracker in immutable segments by compressing point mappings and versions
+- https://github.com/qdrant/qdrant/pull/6056 - Apply undersampling at shard level, significantly improve query performance on large deployments with large search limit
+- https://github.com/qdrant/qdrant/pull/6040 - Trigger optimizers more reliably on changes, prevent optimizers potentially getting stuck
+- https://github.com/qdrant/qdrant/pull/6085 - Significantly improve performance of point delete propagation during resharding on large deployments
+- https://github.com/qdrant/qdrant/pull/6021 - Configure memory barriers in GPU HNSW building to prevent potential race conditions
+- https://github.com/qdrant/qdrant/pull/6074 - Use approximate point count at start of shard transfer to make them start quicker
+- https://github.com/qdrant/qdrant/pull/6165 - Show log message if hardware reporting is enabled
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/6212 - Fix user-defined sharding not being applied in consensus snapshots, potentially corrupting cluster
+- https://github.com/qdrant/qdrant/pull/6209 - Fix malformed user-defined sharding data in consensus snapshots if using numeric shard keys, potentially corrupting cluster
+- https://github.com/qdrant/qdrant/pull/6014 - Fix cluster metadata not being in consensus snapshots, potentially causing cluster state desync
+- https://github.com/qdrant/qdrant/pull/6210 - Fix resharding state not being applied with consensus snapshots, potentially causing cluster state desync
+- https://github.com/qdrant/qdrant/pull/6202 - Fix snapshot restore error when numeric user-defined shard keys are used
+- https://github.com/qdrant/qdrant/pull/6086 - Fix potential panic while propagating point deletions during resharding
+- https://github.com/qdrant/qdrant/pull/6032, https://github.com/qdrant/qdrant/pull/6069 - Don't load or restore segments from hidden files, prevent breakage on hidden files in storage by other tools
+- https://github.com/qdrant/qdrant/pull/6037 - Fix search panic after HNSW creation with GPU when on NVIDIA
+- https://github.com/qdrant/qdrant/pull/6029 - Fix write rate limit not being properly set in strict mode
+- https://github.com/qdrant/qdrant/pull/6118 - Do not rate limit reads for shard transfers in strict mode, it's internal
+- https://github.com/qdrant/qdrant/pull/6121 - Do not rate limit shard cleanup operation in strict mode, it's internal
+- https://github.com/qdrant/qdrant/pull/6152 - Properly rate limit batch point updates
+- https://github.com/qdrant/qdrant/pull/6038 - Keep existing shard configuration if snapshot restore failed to prevent panic on startup
+- https://github.com/qdrant/qdrant/pull/6010 - Use configured CA certificate for internal snapshot transfers
+- https://github.com/qdrant/qdrant/pull/6108, https://github.com/qdrant/qdrant/pull/6115, https://github.com/qdrant/qdrant/pull/6160 - Fix opt-in anonymization of various telemetry fields
+- https://github.com/qdrant/qdrant/pull/6065 - Don't show warning if bootstrap URI is not provided
+-----
 # Release v1.13.4
 # Change log
 
