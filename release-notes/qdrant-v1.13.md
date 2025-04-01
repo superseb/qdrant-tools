@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.13.6](qdrant-v1.13.md#release-v1136) | Mar 31 2025 | 03/31/25 | 2025-03-31 |
 | [v1.13.5](qdrant-v1.13.md#release-v1135) | Mar 21 2025 | 03/21/25 | 2025-03-21 |
 | [v1.13.4](qdrant-v1.13.md#release-v1134) | Feb 17 2025 | 02/17/25 | 2025-02-17 |
 | [v1.13.3](qdrant-v1.13.md#release-v1133) | Feb 11 2025 | 02/11/25 | 2025-02-11 |
@@ -9,6 +10,20 @@
 
 
 
+# Release v1.13.6
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/6279 - In query API, read vectors/payloads once at shard level instead of in every segment, greatly improve search performance when there's lots of segments
+- https://github.com/qdrant/qdrant/pull/6276 - In query API, don't send huge vectors/payloads over internal network, defer reads to greatly improve search performance
+- https://github.com/qdrant/qdrant/pull/6260 - Improve performance of resharding transfers, make them faster on slow disks or with high memory pressure
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/6259 - Fix point estimation in resharding transfers, showing a more reliable ETA
+- https://github.com/qdrant/qdrant/pull/6233 - Fix order_by not always including all values for a point if there are multiple
+-----
 # Release v1.13.5
 # Change log
 
