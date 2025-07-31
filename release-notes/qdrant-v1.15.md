@@ -1,9 +1,27 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.15.1](qdrant-v1.15.md#release-v1151) | Jul 24 2025 | 07/24/25 | 2025-07-24 |
 | [v1.15.0](qdrant-v1.15.md#release-v1150) | Jul 18 2025 | 07/18/25 | 2025-07-18 |
 
 
 
+# Release v1.15.1
+# Changelog
+
+## Improvements
+
+* https://github.com/qdrant/qdrant/pull/6931 - gRPC HealthCheck method now works without authentication, making it consistent with REST methods.
+* https://github.com/qdrant/qdrant/pull/6923 - Use populate storage components with `MADV_SEQUENTIAL` for better IO performance on indexing
+
+## Bug Fixes
+
+* https://github.com/qdrant/qdrant/pull/6932 - Fix point shard routing broken in 1.15 (**Points created in 1.15.0 in multi-shard collections might not behave properly on updates!**)
+* https://github.com/qdrant/qdrant/pull/6903 - Fix compile error in MUSL builds
+* https://github.com/qdrant/qdrant/pull/6910 - Fix panic in `/metrics` on empty collection data
+* https://github.com/qdrant/qdrant/pull/6916 - Fix UUID index storage, resulted in missing filter results.
+
+
+-----
 # Release v1.15.0
 # Change log
 
