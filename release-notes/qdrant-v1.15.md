@@ -1,10 +1,37 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.15.2](qdrant-v1.15.md#release-v1152) | Aug 11 2025 | 08/11/25 | 2025-08-11 |
 | [v1.15.1](qdrant-v1.15.md#release-v1151) | Jul 24 2025 | 07/24/25 | 2025-07-24 |
 | [v1.15.0](qdrant-v1.15.md#release-v1150) | Jul 18 2025 | 07/18/25 | 2025-07-18 |
 
 
 
+# Release v1.15.2
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/6891 - Implement BM25 inference in Qdrant locally
+- https://github.com/qdrant/qdrant/pull/6926 - Improve performance of mutable map index, used for full text, integers and more
+- https://github.com/qdrant/qdrant/pull/6993 - Make log buffer size adjustable when logging to a file
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/6954 - Fix consistency problem in null index storage by deferring writes until flush
+- https://github.com/qdrant/qdrant/pull/6977 - Fix consistency problem in boolean index storage by deferring writes until flush
+- https://github.com/qdrant/qdrant/pull/6994 - Fix consistency problem for deleted vectors by deferring writes until flush
+- https://github.com/qdrant/qdrant/pull/6966 - Fix flush logic in memory mapped bit flags structure, improving data consistency
+- https://github.com/qdrant/qdrant/pull/6975 - Delete versionless points before WAL replay, fix incorrect use of corrupt points
+- https://github.com/qdrant/qdrant/pull/6952 - Fix date time error in custom score boosting formula when having multiple nodes
+- https://github.com/qdrant/qdrant/pull/6998 - In score boosting formula validation error, show each index type only once
+- https://github.com/qdrant/qdrant/pull/6959 - Fix range bounds not being inclusive for linear decay function
+- https://github.com/qdrant/qdrant/pull/6958 - Fix default storage path and missing web UI assets in Debian package
+
+## Web UI
+
+- https://github.com/qdrant/qdrant-web-ui/pull/299 - Show shard distribution of collection in cluster as replica/node matrix
+
+-----
 # Release v1.15.1
 # Changelog
 
