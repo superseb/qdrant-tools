@@ -1,11 +1,25 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.15.3](qdrant-v1.15.md#release-v1153) | Aug 14 2025 | 08/14/25 | 2025-08-14 |
 | [v1.15.2](qdrant-v1.15.md#release-v1152) | Aug 11 2025 | 08/11/25 | 2025-08-11 |
 | [v1.15.1](qdrant-v1.15.md#release-v1151) | Jul 24 2025 | 07/24/25 | 2025-07-24 |
 | [v1.15.0](qdrant-v1.15.md#release-v1150) | Jul 18 2025 | 07/18/25 | 2025-07-18 |
 
 
 
+# Release v1.15.3
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/7002 - Optimize dot product calculation on AVX systems
+- https://github.com/qdrant/qdrant/pull/7049 - In Nix package, use rustup for Rust version management
+
+## Bug fixes
+
+- <https://github.com/qdrant/qdrant/pull/7056> - Fix local BM25 not working as expected due to default parameter differences
+
+-----
 # Release v1.15.2
 # Change log
 
