@@ -131,5 +131,5 @@
     * Reason: lack of real-life usage
     * Alternative: JWT tokens can be configured to provide read-only access to Qdrant
 
-* https://github.com/qdrant/qdrant/pull/6760 - Removed `max_indexing_threads` from config
+* https://github.com/qdrant/qdrant/pull/6760 - Removed `max_optimization_threads` from config
 -----
