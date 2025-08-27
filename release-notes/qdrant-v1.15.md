@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.15.4](qdrant-v1.15.md#release-v1154) | Aug 27 2025 | 08/27/25 | 2025-08-27 |
 | [v1.15.3](qdrant-v1.15.md#release-v1153) | Aug 14 2025 | 08/14/25 | 2025-08-14 |
 | [v1.15.2](qdrant-v1.15.md#release-v1152) | Aug 11 2025 | 08/11/25 | 2025-08-11 |
 | [v1.15.1](qdrant-v1.15.md#release-v1151) | Jul 24 2025 | 07/24/25 | 2025-07-24 |
@@ -7,6 +8,25 @@
 
 
 
+# Release v1.15.4
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/7005 - Reduce Docker image size by 10-40%
+- https://github.com/qdrant/qdrant/pull/7073 - Adjust metrics histogram buckets, show empty buckets and remove small ones
+- https://github.com/qdrant/qdrant/pull/7111 - Include SBOM in Docker image
+- https://github.com/qdrant/qdrant/pull/7119 - Sign Docker images with cosign
+- https://github.com/qdrant/qdrant/pull/7110 - Actively migrate away from old shard key format on disk to a more robust format
+- https://github.com/qdrant/qdrant/pull/7120 - Measure segment size on disk more reliably for improved available disk space checks
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/7133 - Fix not loading some full text index types correctly, temporarily resulting in an empty index
+- https://github.com/qdrant/qdrant/pull/7109 - Fix incorrectly reusing old deleted points in proxy segments
+- https://github.com/qdrant/qdrant/pull/7106 - Preserve segment ID mapping when proxying all segments for a snapshot, potentially mixing up segments
+
+-----
 # Release v1.15.3
 # Change log
 
