@@ -1,5 +1,6 @@
 | Version | Date | US date | EU date |
 | ------- | ---- | ------- | ------- |
+| [v1.15.5](qdrant-v1.15.md#release-v1155) | Sep 30 2025 | 09/30/25 | 2025-09-30 |
 | [v1.15.4](qdrant-v1.15.md#release-v1154) | Aug 27 2025 | 08/27/25 | 2025-08-27 |
 | [v1.15.3](qdrant-v1.15.md#release-v1153) | Aug 14 2025 | 08/14/25 | 2025-08-14 |
 | [v1.15.2](qdrant-v1.15.md#release-v1152) | Aug 11 2025 | 08/11/25 | 2025-08-11 |
@@ -8,6 +9,36 @@
 
 
 
+# Release v1.15.5
+# Change log
+
+## Improvements
+
+- https://github.com/qdrant/qdrant/pull/7157 - Acknowledge update/delete by filter operations on flush, preventing very slow restart
+- https://github.com/qdrant/qdrant/pull/7217, https://github.com/qdrant/qdrant/pull/7218, https://github.com/qdrant/qdrant/pull/7219, https://github.com/qdrant/qdrant/pull/7220, https://github.com/qdrant/qdrant/pull/7221 - Add API validation to min_should, filters, point update batch and others
+- https://github.com/qdrant/qdrant/pull/7235 - Add timeout parameter to remove peer operation
+- https://github.com/qdrant/qdrant/pull/7320 - Decrease internal update batch sizes to minimize search latency spikes on large user batches
+- https://github.com/qdrant/qdrant/pull/7233 - Limit number of segments loaded in parallel, preventing potential OOM on large clusters
+- https://github.com/qdrant/qdrant/pull/7222 - Add strict mode configuration to specify max number of payload indices
+- https://github.com/qdrant/qdrant/pull/7240 - Improve error reporting on mutable ID tracker load errors
+- https://github.com/qdrant/qdrant/pull/7151 - Improve error reporting on flush problems
+- https://github.com/qdrant/qdrant/pull/7244 - Remove vector count field from collection info
+- https://github.com/qdrant/qdrant/pull/7177 - Do not anonymize peer ID in telemetry data
+
+## Bug fixes
+
+- https://github.com/qdrant/qdrant/pull/7263 - Fix not flushing mutable ID tracker files after creation, potentially causing segment corruption
+- https://github.com/qdrant/qdrant/pull/7248 - Fix data race at the end of snapshot creation causing missing points
+- https://github.com/qdrant/qdrant/pull/7298, https://github.com/qdrant/qdrant/pull/7306 - Fix data race during snapshots corrupting point data if a point is moved
+- https://github.com/qdrant/qdrant/pull/7241, https://github.com/qdrant/qdrant/pull/7265, https://github.com/qdrant/qdrant/pull/7267, https://github.com/qdrant/qdrant/pull/7269, https://github.com/qdrant/qdrant/pull/7277 - Fix potential deadlock in REST runtime while streaming shard snapshot
+- https://github.com/qdrant/qdrant/pull/7015 - Fix potential deadlock on REST server runtime
+- https://github.com/qdrant/qdrant/pull/7172 - Fix potential recursive deadlock when fetching all vectors
+- https://github.com/qdrant/qdrant/pull/7203 - Fix potential deadlock in scroll API
+- https://github.com/qdrant/qdrant/pull/7303 - Fix incorrectly deleting old point versions from segments
+- https://github.com/qdrant/qdrant/pull/7194 - Fix upsert operations with duplicate point IDs not being applied properly
+- https://github.com/qdrant/qdrant/pull/7252 - Fix phrase matching ignoring unknown tokens
+- https://github.com/qdrant/qdrant/pull/7264 - Fix strict mode validation on nested filters
+-----
 # Release v1.15.4
 # Change log
 
